@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card mx-5 col-6">
+    
+<div class="card-body">
+<form method="POST">
+    <h4>Update User Role</h4><hr>
+    <!-- Security token by Django -->
+    {% csrf_token %}
+
+    <!-- form as paragraph -->
+    {{ form.as_p }}
+
+    <input type="submit" value="Update" class="btn btn-sm btn-primary">
+</form>
+</div>
+</div>
+
+{% endblock content %}
